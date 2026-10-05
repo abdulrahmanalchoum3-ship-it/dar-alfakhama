@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="دار الفخامة: منتجات ذكية ويومية وألعاب أطفال وهدايا بأسعار اقتصادية. الدفع الإلكتروني والتوصيل خلال 24-48 ساعة في أبوظبي ودبي.">
+<meta name="theme-color" content="#000000">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%92%8E%3C/text%3E%3C/svg%3E">
+<title>دار الفخامة — منتجات وألعاب وهدايا | توصيل أبوظبي ودبي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{--black:#000;--panel:#0d0d0d;--gold:#d4af37;--gold-light:#f1d98a;--gold-dark:#8f7220;--text:#f3ead2;--muted:#a99f84;--danger:#e0645c}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Tajawal','Segoe UI',Tahoma,Arial,sans-serif;background:var(--black);color:var(--text);line-height:1.8}
+  a{color:inherit;text-decoration:none}
+  :focus-visible{outline:2px solid var(--gold-light);outline-offset:3px}
+  .wrap{max-width:1150px;margin:0 auto;padding:0 20px}
+
+  .notice{background:var(--gold);color:var(--black);text-align:center;font-weight:700;padding:6px 12px;font-size:.95rem}
+  header{position:sticky;top:0;z-index:10;background:rgba(0,0,0,.96);border-bottom:1px solid var(--gold)}
+  .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+  .logo{font-size:1.6rem;font-weight:800;color:var(--gold);padding:2px 16px;border:1px solid var(--gold);outline:1px solid var(--gold-dark);outline-offset:3px;cursor:pointer;user-select:none}
+  nav ul{display:flex;gap:22px;list-style:none}
+  nav a{font-weight:500;padding:4px 2px;border-bottom:1px solid transparent;transition:.2s}
+  nav a:hover{color:var(--gold);border-color:var(--gold)}
+
+  .hero{text-align:center;padding:80px 0 60px;border-bottom:1px solid var(--gold-dark)}
+  .hero h1{font-size:clamp(2rem,6vw,3.6rem);font-weight:800;line-height:1.4;background:linear-gradient(180deg,var(--gold-light),var(--gold) 55%,var(--gold-dark));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero p{max-width:580px;margin:14px auto 12px;color:var(--muted);font-size:1.1rem}
+  .badge{display:inline-block;margin:6px 0 26px;padding:6px 18px;border:1px solid var(--gold);outline:1px solid var(--gold-dark);outline-offset:3px;color:var(--gold-light);font-weight:700}
+
+  .btn{display:inline-block;cursor:pointer;font:inherit;font-weight:700;padding:10px 26px;border:1px solid var(--gold);background:var(--gold);color:var(--black);transition:.2s;text-align:center}
+  .btn:hover{background:var(--gold-light)}
+  .btn.ghost{background:transparent;color:var(--gold)}
+  .btn.ghost:hover{background:var(--gold);color:var(--black)}
+  .btn.small{padding:4px 12px;font-size:.85rem}
+  .btn.danger{border-color:var(--danger);color:var(--danger);background:transparent}
+  .btn.danger:hover{background:var(--danger);color:var(--black)}
+  .btn:disabled{opacity:.6;cursor:wait}
+
+  section{padding:70px 0}
+  .title{text-align:center;font-size:2rem;font-weight:800;color:var(--gold);margin-bottom:10px}
+  .sub{text-align:center;color:var(--muted);margin-bottom:28px}
+  .tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:34px}
+  .tab{cursor:pointer;font:inherit;font-weight:500;padding:6px 20px;background:transparent;color:var(--text);border:1px solid var(--gold-dark);transition:.2s}
+  .tab:hover{border-color:var(--gold);color:var(--gold)}
+  .tab[aria-pressed="true"]{background:var(--gold);color:var(--black);border-color:var(--gold);font-weight:700}
+
+  .cat-block{margin-bottom:56px;scroll-margin-top:90px}
+  .cat-block h3{font-size:1.5rem;color:var(--gold-light);border-bottom:1px solid var(--gold-dark);padding-bottom:6px;margin-bottom:22px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:24px}
+  .card{background:var(--panel);padding:14px;border:1px solid var(--gold);outline:1px solid var(--gold-dark);outline-offset:-7px;display:flex;flex-direction:column;transition:transform .2s}
+  .card{scroll-margin-top:90px}
+  .card.highlight{box-shadow:0 0 0 3px var(--gold-light),0 0 28px rgba(212,175,55,.65)}
+  td a{color:var(--gold);text-decoration:underline}
+  .card:hover{transform:translateY(-4px)}
+  .thumb{aspect-ratio:1/1;display:grid;place-items:center;font-size:4.5rem;background:radial-gradient(circle at 50% 40%,#2a2210,#050505 75%);border:1px solid var(--gold-dark);margin:6px 0 14px;overflow:hidden}
+  .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+  .tag{align-self:flex-start;margin:0 6px 6px;padding:0 10px;font-size:.8rem;border:1px solid var(--gold-dark);color:var(--gold-light)}
+  .card h4{font-size:1.15rem;margin:0 6px}
+  .card p{color:var(--muted);font-size:.93rem;margin:2px 6px 10px;flex:1}
+  .price{color:var(--gold);font-weight:800;font-size:1.3rem;margin:0 6px 12px}
+  .card .btn{margin:0 6px 6px}
+
+  .about{border-top:1px solid var(--gold-dark);border-bottom:1px solid var(--gold-dark);text-align:center}
+  .about p{max-width:640px;margin:0 auto 10px;color:var(--muted)}
+  .shipping{background:linear-gradient(180deg,#000,#0b0905 50%,#000)}
+  .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .info-card{background:var(--panel);padding:24px 18px;text-align:center;border:1px solid var(--gold-dark);outline:1px solid #2a2310;outline-offset:-7px}
+  .info-icon{font-size:2.2rem;line-height:1.2;margin-bottom:6px}
+  .info-card h3{color:var(--gold-light);font-size:1.15rem;margin-bottom:6px}
+  .info-card p{color:var(--muted);font-size:.95rem}
+  .admin-link{color:var(--muted);font-size:.8rem;text-decoration:underline;opacity:.7}
+  .admin-link:hover{color:var(--gold);opacity:1}
+  footer{text-align:center;padding:30px 0;color:var(--muted);font-size:.9rem}
+
+  dialog{margin:auto;width:min(92vw,480px);max-height:92vh;overflow:auto;padding:26px;background:var(--panel);color:var(--text);border:1px solid var(--gold);outline:1px solid var(--gold-dark);outline-offset:4px}
+  dialog.wide{width:min(96vw,980px)}
+  dialog::backdrop{background:rgba(0,0,0,.82)}
+  dialog h2{color:var(--gold);font-size:1.4rem;margin-bottom:4px}
+  .chosen{color:var(--muted);margin-bottom:10px}
+  label{display:block;font-weight:500;margin:12px 0 4px}
+  input,textarea,select{width:100%;font:inherit;color:var(--text);background:#000;border:1px solid var(--gold-dark);padding:10px 12px}
+  input:focus,textarea:focus,select:focus{border-color:var(--gold);outline:none}
+  textarea{resize:vertical;min-height:80px}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .total{margin-top:14px;padding:10px 12px;border:1px solid var(--gold-dark);display:flex;justify-content:space-between;color:var(--gold-light);font-weight:700}
+  .hint{color:var(--muted);font-size:.85rem;margin-top:10px}
+  .error{color:var(--danger);font-size:.9rem;min-height:1.4em;margin-top:6px}
+  .actions{display:flex;gap:10px;margin-top:18px}
+  .actions .btn{flex:1}
+
+  .admin-top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;margin-bottom:14px}
+  .stats{color:var(--muted)}
+  .table-wrap{overflow-x:auto;border:1px solid var(--gold-dark)}
+  table{width:100%;border-collapse:collapse;min-width:760px;font-size:.92rem}
+  th,td{padding:8px 10px;text-align:right;border-bottom:1px solid #2a2310;vertical-align:top}
+  th{background:#15110a;color:var(--gold)}
+  td select{padding:4px 6px;width:auto}
+  .empty{padding:30px;text-align:center;color:var(--muted)}
+
+  #toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--black);padding:10px 22px;font-weight:700;z-index:50;display:none;max-width:90vw;text-align:center}
+
+  @media (max-width:640px){
+    .bar{flex-direction:column;gap:8px}
+    nav ul{gap:16px}
+    .hero{padding:56px 0 44px}
+    section{padding:50px 0}
+    .row{grid-template-columns:1fr}
+    .grid{grid-template-columns:repeat(2,1fr);gap:14px}
+    .thumb{font-size:3rem}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="notice">التوصيل متاح داخل أبوظبي ودبي فقط 🇦🇪</div>
+
+<header>
+  <div class="wrap bar">
+    <a id="logo" class="logo">دار الفخامة</a>
+    <nav aria-label="القائمة الرئيسية">
+      <ul>
+        <li><a href="#products">المنتجات</a></li>
+        <li><a href="#about">من نحن</a></li>
+        <li><a href="#shipping">الدفع والتوصيل</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="hero">
+    <div class="wrap">
+      <h1>فخامة تليق بذوقك الرفيع</h1>
+      <p>منتجات ذكية ويومية وألعاب أطفال وهدايا بسيطة بأسعار اقتصادية، تصلك إلى باب بيتك. اختر منتجك، أدخل بياناتك، وسنتواصل معك لتأكيد الطلب.</p>
+      <div class="badge">دفع إلكتروني آمن · توصيل خلال 24–48 ساعة داخل أبوظبي ودبي فقط</div><br>
+      <a href="#products" class="btn">تصفّح المنتجات</a>
+    </div>
+  </div>
+
+  <section id="products">
+    <div class="wrap">
+      <h2 class="title">منتجاتنا</h2>
+      <p class="sub">اختر القسم الذي يناسبك</p>
+      <div class="tabs" id="tabs" role="group" aria-label="أقسام المتجر"></div>
+      <div id="catalog"></div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap">
+      <h2 class="title">من نحن</h2>
+      <p>نختار لك منتجات عالية الجودة بأسعار عادلة، ونتابع طلبك حتى يصل إليك.</p>
+      <p>الطلب بسيط: تملأ النموذج بعنوانك في أبوظبي أو دبي ونتواصل معك مباشرة لتأكيد التفاصيل والتوصيل.</p>
+    </div>
+  </section>
+
+  <section id="shipping" class="shipping">
+    <div class="wrap">
+      <h2 class="title">طرق الدفع والتوصيل</h2>
+      <p class="sub">طلبك بسيط وآمن، من الاختيار حتى الاستلام</p>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">💳</div>
+          <h3>الدفع الإلكتروني فقط</h3>
+          <p>بعد تأكيد طلبك نرسل لك رابط دفع آمن عبر واتساب، ويُشحن الطلب بعد إتمام الدفع. لا ندعم الدفع النقدي.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">🚚</div>
+          <h3>توصيل سريع</h3>
+          <p>يصلك طلبك خلال 24 إلى 48 ساعة من تأكيد الدفع.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">📍</div>
+          <h3>أبوظبي ودبي فقط</h3>
+          <p>التوصيل متاح حالياً داخل أبوظبي ودبي فقط، ولا يتوفر الشحن لأي منطقة أخرى.</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">✅</div>
+          <h3>تأكيد الطلب عبر واتساب</h3>
+          <p>بعد إرسال طلبك نتواصل معك لتأكيد التفاصيل وإرسال رابط الدفع.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer">
+  <div class="wrap">
+    <p>💳 الدفع إلكترونياً فقط · 🚚 التوصيل خلال 24–48 ساعة</p>
+    <p>🇦🇪 نخدم أبوظبي ودبي فقط — لا يتوفر التوصيل إلى أي منطقة أخرى حالياً.</p>
+    <p>© <span id="year"></span> دار الفخامة — جميع الحقوق محفوظة</p>
+    <p><a href="#" id="adminLink" class="admin-link">لوحة الإدارة</a></p>
+  </div>
+</footer>
+
+<!-- نافذة الطلب -->
+<dialog id="orderDialog" aria-labelledby="dlgTitle">
+  <form id="orderForm" novalidate>
+    <h2 id="dlgTitle">إتمام الطلب</h2>
+    <p class="chosen" id="chosen"></p>
+
+    <label for="name">الاسم الكامل</label>
+    <input id="name" name="name" required autocomplete="name">
+
+    <div class="row">
+      <div>
+        <label for="phone">رقم الهاتف (إماراتي)</label>
+        <input id="phone" name="phone" type="tel" placeholder="05XXXXXXXX" inputmode="tel" required autocomplete="tel" dir="ltr">
+      </div>
+      <div>
+        <label for="qty">الكمية</label>
+        <select id="qty" name="qty"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <label for="emirate">إمارة التوصيل</label>
+        <select id="emirate" name="emirate" required>
+          <option value="">اختر الإمارة</option>
+          <option>أبوظبي</option>
+          <option>دبي</option>
+        </select>
+      </div>
+      <div>
+        <label for="area">المنطقة / الحي</label>
+        <input id="area" name="area" required>
+      </div>
+    </div>
+
+    <label for="address">العنوان التفصيلي</label>
+    <input id="address" name="address" placeholder="الشارع، المبنى، رقم الشقة" required autocomplete="street-address">
+
+    <label for="msg">رسالتك (اختياري)</label>
+    <textarea id="msg" name="msg" placeholder="اللون، المقاس، أو أي ملاحظة"></textarea>
+
+    <div class="total"><span>الإجمالي</span><span id="totalPrice"></span></div>
+    <p class="hint">الدفع إلكترونياً فقط: نرسل لك رابط الدفع عبر واتساب بعد تأكيد الطلب. التوصيل خلال 24–48 ساعة داخل أبوظبي ودبي فقط. عند الضغط على "تأكيد الطلب" سيُفتح واتساب برسالة جاهزة لإرسالها إلينا.</p>
+    <p class="error" id="formError" role="alert"></p>
+
+    <div class="actions">
+      <button type="submit" class="btn" id="submitBtn">تأكيد الطلب</button>
+      <button type="button" class="btn ghost" id="cancel">إلغاء</button>
+    </div>
+  </form>
+</dialog>
+
+<!-- نافذة تأكيد واتساب -->
+<dialog id="waDialog" aria-labelledby="waTitle">
+  <h2 id="waTitle">تم تجهيز طلبك ✅</h2>
+  <p class="chosen">فتحنا واتساب برسالة جاهزة. اضغط <strong>إرسال</strong> داخل واتساب لإتمام الطلب.</p>
+  <p class="hint">لم يفتح واتساب؟ استخدم الزر التالي، أو انسخ الرسالة وأرسلها يدوياً.</p>
+  <div class="actions">
+    <a id="waLink" class="btn" href="#" target="_blank" rel="noopener">فتح واتساب</a>
+    <button type="button" class="btn ghost" id="waCopy">نسخ الرسالة</button>
+  </div>
+  <div class="actions">
+    <button type="button" class="btn ghost" id="waClose">إغلاق</button>
+  </div>
+</dialog>
+
+<!-- لوحة الطلبات (مخفية) -->
+<dialog id="adminDialog" class="wide" aria-labelledby="adminTitle">
+  <h2 id="adminTitle">لوحة الطلبات</h2>
+  <div class="admin-top">
+    <span class="stats" id="stats"></span>
+    <span>
+      <button type="button" class="btn small danger" id="clearAll">حذف كل الطلبات</button>
+      <button type="button" class="btn small ghost" id="closeAdmin">إغلاق</button>
+    </span>
+  </div>
+  <div class="table-wrap" id="ordersWrap"></div>
+  <p class="hint">ملاحظة: الطلبات المعروضة هنا محفوظة في متصفح هذا الجهاز فقط. المصدر الأساسي للطلبات هو رسائل واتساب التي تصلك.</p>
+</dialog>
+
+<div id="toast" role="status"></div>
+
+<script>
+  /* ===== الإعدادات ===== */
+  const STORE_NAME     = "دار الفخامة";
+  const WHATSAPP_NUMBER = "963936662492";          // رقم واتساب استقبال الطلبات (بصيغة دولية بدون + أو أصفار)
+  const CURRENCY       = "د.إ";
+  const ADMIN_PASSWORD = "ضع-كلمة-مرور-قوية-هنا";   // ← السطر الوحيد المطلوب تعديله: ضع كلمة مرور قوية (12 حرفاً فأكثر بحروف وأرقام ورموز)
+  const STORAGE_KEY    = "dar_alfakhama_orders";
+  // رابط موقعك بعد النشر (اختياري)، مثال: "https://my-store.com/" — إن تركته فارغاً يُستخدم رابط الصفحة الحالية (إذا كانت http/https)
+  const SITE_URL       = "";
+  const EMIRATES       = ["أبوظبي", "دبي"];
+
+  const CATEGORIES = [
+    { id: "daily", name: "قسم المنتجات الذكية واليومية", icon: "📱" },
+    { id: "toys",  name: "قسم ألعاب الأطفال الاقتصادية", icon: "🧸" },
+    { id: "gifts", name: "قسم الهدايا والباقات الاقتصادية", icon: "🎁" }
+  ];
+
+  /* كل منتج له photo = معرّف صورة من Unsplash (تُحمَّل من images.unsplash.com).
+     لاستخدام صورة موردك الحقيقية ضع بدلها الحقل:  image: "https://..." */
+  const UNSPLASH = id => "https://images.unsplash.com/photo-" + id + "?auto=format&fit=crop&w=600&h=600&q=80";
+
+  const RAW_PRODUCTS = [
+    // ----- المنتجات الذكية واليومية (D) -----
+    { cat: "daily", photo: "1590658268037-6bf12165a8df", name: "سماعات رأس بلونين أسود وأبيض",  desc: "سماعات رأس بتصميم أنيق بلونين الأسود والأبيض.",       price: 89,  supplierUrl: "" },
+    { cat: "daily", photo: "1613040809024-b4ef7ba99bc3", name: "سماعات رأس لاسلكية وردية",       desc: "سماعات لاسلكية بلون وردي وأبيض بتصميم عصري.",         price: 99,  supplierUrl: "" },
+    { cat: "daily", photo: "1641048930621-ab5d225ae5b0", name: "سماعات رأس فوق الأذن",           desc: "سماعات رأس مريحة للاستماع والمكالمات اليومية.",       price: 79,  supplierUrl: "" },
+    { cat: "daily", photo: "1578319439584-104c94d37305", name: "سماعات أذن لاسلكية سوداء",       desc: "سماعات أذن لاسلكية سوداء خفيفة وسهلة الحمل.",         price: 59,  supplierUrl: "" },
+    { cat: "daily", photo: "1606220588913-b3aacb4d2f46", name: "سماعات بلوتوث سوداء وزرقاء",     desc: "سماعات بلوتوث بتصميم رياضي بلونين الأسود والأزرق.",    price: 69,  supplierUrl: "" },
+    { cat: "daily", photo: "1484704849700-f032a568e944", name: "سماعات سلكية رمادية وبنية",      desc: "سماعات سلكية بتصميم كلاسيكي بلونين الرمادي والبني.",   price: 39,  supplierUrl: "" },
+    { cat: "daily", photo: "1579586337278-3befd40fd17a", name: "ساعة ذكية بسوار داكن",           desc: "ساعة ذكية بسوار داكن وشاشة ملونة بأيقونات التطبيقات.", price: 119, supplierUrl: "" },
+    { cat: "daily", photo: "1551816230-ef5deaed4a26",    name: "ساعة ذكية سوداء رياضية",         desc: "ساعة ذكية سوداء بتصميم رياضي للاستخدام اليومي.",       price: 99,  supplierUrl: "" },
+    { cat: "daily", photo: "1624096104992-9b4fa3a279dd", name: "ساعة ذكية سوداء أنيقة",          desc: "ساعة ذكية سوداء بتصميم نظيف تناسب كل الأوقات.",        price: 129, supplierUrl: "" },
+    { cat: "daily", photo: "1461141346587-763ab02bced9", name: "ساعة ذكية سوداء مع علبتها",      desc: "ساعة ذكية سوداء تصلك مع علبتها جاهزة للإهداء.",        price: 109, supplierUrl: "" },
+    { cat: "daily", photo: "1575311373937-040b8e1fd5b6", name: "ساعة رقمية LED سوداء",           desc: "ساعة رقمية بإضاءة LED بتصميم عملي وسعر اقتصادي.",      price: 49,  supplierUrl: "" },
+    { cat: "daily", photo: "1632794716789-42d9995fb5b6", name: "ساعة ذكية بسوار مطاطي",          desc: "ساعة ذكية خفيفة بسوار مريح للمعصم.",                   price: 139, supplierUrl: "" },
+    { cat: "daily", photo: "1660844817855-3ecc7ef21f12", name: "ساعة رقمية بوجه أسود",           desc: "ساعة رقمية بوجه أسود وتصميم عصري بسيط.",               price: 89,  supplierUrl: "" },
+    { cat: "daily", photo: "1628202926206-c63a34b1618f", name: "نظارة شمسية سوداء",              desc: "نظارة شمسية سوداء عملية لأجواء الإمارات المشمسة.",     price: 39,  supplierUrl: "" },
+    { cat: "daily", photo: "1572635196237-14b3f281503f", name: "نظارة شمسية ويفيرر سوداء",       desc: "نظارة ويفيرر سوداء بتصميم كلاسيكي وسعر مناسب.",        price: 45,  supplierUrl: "" },
+    { cat: "daily", photo: "1511499767150-a48a237f0083", name: "نظارة شمسية دائرية",             desc: "نظارة دائرية بإطار رفيع بطابع كلاسيكي.",               price: 49,  supplierUrl: "" },
+    { cat: "daily", photo: "1567473810954-507d59716c25", name: "نظارة شمسية أفييتور",            desc: "نظارة أفييتور بإطار معدني خفيف.",                      price: 55,  supplierUrl: "" },
+    { cat: "daily", photo: "1584036553516-bf83210aa16c", name: "نظارة شمسية مربعة سوداء",        desc: "إطار أسود مربع وعدسات داكنة بإطلالة عصرية.",           price: 39,  supplierUrl: "" },
+    { cat: "daily", photo: "1577803645773-f96470509666", name: "نظارة شمسية بإطار أبيض",         desc: "إطار أبيض لافت مع عدسات بنية.",                        price: 49,  supplierUrl: "" },
+    { cat: "daily", photo: "1502767089025-6572583495f9", name: "نظارة شمسية كلوب ماستر",         desc: "تصميم كلوب ماستر بإطار أسود وعدسات داكنة.",            price: 55,  supplierUrl: "" },
+    { cat: "daily", photo: "1559070081-648fb00b2ed1",    name: "نظارة شمسية بإطار سلحفاة",       desc: "إطار بنقشة السلحفاة بتصميم ويفيرر مع علبة.",           price: 59,  supplierUrl: "" },
+    { cat: "daily", photo: "1622560480654-d96214fdc887", name: "حقيبة ظهر حمراء",                desc: "حقيبة ظهر حمراء عملية للدراسة والتنقل.",               price: 99,  supplierUrl: "" },
+    { cat: "daily", photo: "1603219527847-24c87f552a77", name: "حقيبة كتف سوداء صغيرة",          desc: "حقيبة كتف سوداء صغيرة تتسع للأغراض اليومية.",          price: 79,  supplierUrl: "" },
+    { cat: "daily", photo: "1637868796504-32f45a96d5a0", name: "طقم محفظة وحزام",                desc: "محفظة وحزام بتنسيق متكامل، فكرة عملية للهدية.",        price: 69,  supplierUrl: "" },
+
+    // ----- ألعاب الأطفال الاقتصادية (T) -----
+    { cat: "toys", aud: "للجنسين", photo: "1575364289437-fb1479d52732", name: "مكعبات خشبية ملونة للبناء",   desc: "مكعبات خشبية ملونة تنمّي التركيز والخيال.",          price: 59,  supplierUrl: "" },
+    { cat: "toys", aud: "للجنسين", photo: "1638802538115-041e14d28d6a", name: "مجموعة بناء خشبية ملونة",     desc: "قطع خشبية ملونة لبناء مجسمات ومدن صغيرة.",           price: 79,  supplierUrl: "" },
+    { cat: "toys", aud: "للجنسين", photo: "1539477192933-1a7dde04aa77", name: "لعبة برج الخشب المتوازن",     desc: "لعبة جماعية لتنمية التركيز واليد الثابتة.",           price: 49,  supplierUrl: "" },
+    { cat: "toys", aud: "للجنسين", photo: "1558907353-ceb54f3882ed",    name: "مكعبات الحروف التعليمية",     desc: "مكعبات بحروف تساعد الطفل على التعلّم باللعب.",       price: 55,  supplierUrl: "" },
+    { cat: "toys", aud: "للجنسين", photo: "1631106256072-54c89defe828", name: "مكعبات بناء ملونة للصغار",    desc: "مكعبات تركيب ملونة بألوان زاهية للأطفال.",           price: 69,  supplierUrl: "" },
+    { cat: "toys", aud: "للجنسين", photo: "1631106254201-ffbee2305c5b", name: "مجموعة تركيب بأربعة ألوان",   desc: "قطع تركيب بأحمر وأزرق وأصفر وأخضر لتنمية الإبداع.",  price: 79,  supplierUrl: "" },
+    { cat: "toys", aud: "للجنسين", photo: "1672267273720-053bee27b9a2", name: "صندوق مكعبات بناء متنوعة",    desc: "مجموعة كبيرة من قطع التركيب الملونة بأحجام مختلفة.", price: 119, supplierUrl: "" },
+    { cat: "toys", aud: "للجنسين", photo: "1633469924738-52101af51d87", name: "مجموعة تركيب للمبدعين",       desc: "قطع تركيب متعددة الألوان لبناء ما يتخيله الطفل.",    price: 129, supplierUrl: "" },
+    { cat: "toys", aud: "للجنسين", photo: "1560961911-ba7ef651a56c",    name: "مكعبات تركيب زرقاء",          desc: "مكعبات تركيب زرقاء لألعاب البناء والذكاء.",          price: 59,  supplierUrl: "" },
+    { cat: "toys", aud: "للأولاد", photo: "1527430253228-e93688616381", name: "روبوت أزرق تعليمي",           desc: "روبوت بلاستيكي أزرق يثير فضول الأطفال للتقنية.",     price: 89,  supplierUrl: "" },
+    { cat: "toys", aud: "للأولاد", photo: "1657641898365-48ae7d64e676", name: "روبوت ذكي بكاميرا",           desc: "روبوت لعبة بتصميم عصري يشبه الروبوتات الذكية.",      price: 149, supplierUrl: "" },
+    { cat: "toys", aud: "للأولاد", photo: "1581557991964-125469da3b8a", name: "روبوت أخضر وبني",             desc: "روبوت لعبة بتفاصيل ميكانيكية جذابة.",                price: 79,  supplierUrl: "" },
+    { cat: "toys", aud: "للأولاد", photo: "1614897464244-86c6b2fdda79", name: "روبوت أخضر وأزرق وأبيض",      desc: "روبوت ملوّن بتصميم مرح للأطفال.",                    price: 85,  supplierUrl: "" },
+    { cat: "toys", aud: "للأولاد", photo: "1659018966820-de07c94e0d01", name: "روبوت لعبة بلون أزرق",        desc: "روبوت لعبة أنيق بتفاصيل واضحة ومناسب للهدايا.",      price: 119, supplierUrl: "" },
+    { cat: "toys", aud: "للأولاد", photo: "1591462391993-0273cfe5ab55", name: "روبوت أحمر وأبيض",            desc: "روبوت لعبة بالأحمر والأبيض بتصميم رياضي.",           price: 85,  supplierUrl: "" },
+    { cat: "toys", aud: "للأولاد", photo: "1591462392228-2bb4ed2babff", name: "سيارة ألعاب بلاستيكية ملونة", desc: "سيارة لعبة بألوان الأحمر والأصفر والأزرق.",          price: 29,  supplierUrl: "" },
+    { cat: "toys", aud: "للأولاد", photo: "1599409673963-8f304a658f4e", name: "سيارة سباق لعبة مع شخصية",    desc: "سيارة سباق لعبة بألوان البرتقالي والأزرق مع شخصية.", price: 69,  supplierUrl: "" },
+    { cat: "toys", aud: "للبنات",  photo: "1612635466104-e3aab50680b6", name: "دمية ضفدع قطيفة",             desc: "دمية قطيفة ناعمة بلون أخضر وأبيض للعناق.",           price: 39,  supplierUrl: "" },
+
+    // ----- الهدايا والباقات الاقتصادية (L) -----
+    { cat: "gifts", photo: "1513201099705-a9746e1e201f", name: "صندوق هدية بشريط وردي",          desc: "صندوق هدية بني بشريط وردي، يُعبّأ بما تختاره.",            price: 49,  supplierUrl: "" },
+    { cat: "gifts", photo: "1608755728617-aefab37d2edd", name: "صندوق هدية ذهبي وفضي",           desc: "تغليف ذهبي وفضي أنيق يناسب المناسبات الخاصة.",             price: 69,  supplierUrl: "" },
+    { cat: "gifts", photo: "1608755727748-dfa2e44f255b", name: "صندوق هدية أسود وبني",           desc: "صندوق هدية بدرجات الأسود والبني بإطلالة راقية.",           price: 59,  supplierUrl: "" },
+    { cat: "gifts", photo: "1510284876186-b1a84b94418f", name: "باقة أربعة صناديق هدايا بنية",   desc: "أربعة صناديق بنية متناسقة، مناسبة لباقات الهدايا المتعددة.", price: 119, supplierUrl: "" },
+    { cat: "gifts", photo: "1707944145479-12755f0434d8", name: "صندوق هدية أخضر نعناعي مع ورد", desc: "صندوق أخضر مربوط بخيط مع ورود لهدية رقيقة.",               price: 79,  supplierUrl: "" },
+    { cat: "gifts", photo: "1521478706270-f2e33c203d95", name: "صندوقا هدية بنقش زهور وردي",     desc: "صندوقان بنقش زهور بالوردي والأبيض لهدية نسائية.",          price: 89,  supplierUrl: "" },
+    { cat: "gifts", photo: "1671150590142-d2637ab7c670", name: "صندوقا هدية أبيضان بشريط أحمر", desc: "صندوقان أبيضان بفيونكة حمراء للمناسبات والأعياد.",         price: 99,  supplierUrl: "" },
+    { cat: "gifts", photo: "1671150590216-f138600130ce", name: "صندوق هدية أبيض بفيونكة حمراء",  desc: "صندوق أبيض ببساطة أنيقة وفيونكة حمراء.",                   price: 39,  supplierUrl: "" },
+    { cat: "gifts", photo: "1549465220-1a8b9238cd48",    name: "صندوق هدية مغلّف أنيق",          desc: "صندوق هدية مغلّف بعناية جاهز للتقديم.",                    price: 45,  supplierUrl: "" },
+    { cat: "gifts", photo: "1513885535751-8b9238bd345a", name: "باقة صناديق هدايا مختارة",       desc: "مجموعة صناديق هدايا بألوان متناسقة لباقة مميزة.",          price: 129, supplierUrl: "" },
+    { cat: "gifts", photo: "1575384043001-f37f48835528", name: "صندوق هدية أبيض وأحمر",          desc: "صندوق هدية بتصميم أبيض وأحمر مناسب لكل الأعمار.",          price: 55,  supplierUrl: "" },
+    { cat: "gifts", photo: "1592903297149-37fb25202dfa", name: "تغليف هدايا بنقش زهور",          desc: "ورق تغليف بنقش زهور لتقديم الهدايا بأناقة.",               price: 25,  supplierUrl: "" }
+  ];
+
+  // كود المنتج: D = ذكية ويومية، T = ألعاب، L = هدايا (مثال: D07، T12، L03) — الرابط المباشر: #product-D07
+  const CODE_PREFIX = { daily: "D", toys: "T", gifts: "L" };
+  const codeCounter = {};
+  const PRODUCTS = RAW_PRODUCTS.map((p, i) => {
+    codeCounter[p.cat] = (codeCounter[p.cat] || 0) + 1;
+    return {
+      ...p,
+      id: i + 1,
+      code: CODE_PREFIX[p.cat] + String(codeCounter[p.cat]).padStart(2, "0"),
+      image: p.image || UNSPLASH(p.photo)
+    };
+  });
+
+  /* ===== مصادر الموردين (الدروبشيبينغ) =====
+     1) في كل منتج حقل  supplierUrl: ""  ← ضع فيه رابط المنتج الأصلي عند المورد (Noon / Amazon.ae / مورد توصيل).
+        عند تعبئته يصلك في واتساب سطر "المورد الأصلي" برابطه المباشر.
+     2) إذا تركته فارغاً يصلك رابطا بحث جاهزان (Amazon.ae و Noon) بكلمات المنتج أدناه لتصل لمصدره بسرعة. */
+  const SUPPLIER_SEARCH = [
+    { label: "بحث Amazon.ae", base: "https://www.amazon.ae/s?k=" },
+    { label: "بحث Noon",      base: "https://www.noon.com/uae-en/search/?q=" }
+  ];
+  const SUPPLIER_QUERY = {
+    D01: "over ear headphones black white", D02: "wireless headphones pink white", D03: "over ear headphones",
+    D04: "wireless earphones black", D05: "bluetooth earbuds black blue", D06: "wired headphones",
+    D07: "smart watch dark band color display", D08: "sport smart watch black", D09: "smart watch black",
+    D10: "smartwatch black", D11: "led digital watch black", D12: "smart watch bluetooth", D13: "digital watch black face",
+    D14: "black sunglasses", D15: "wayfarer sunglasses black", D16: "round sunglasses gold frame",
+    D17: "gold aviator sunglasses", D18: "square black sunglasses", D19: "white frame sunglasses brown lens",
+    D20: "clubmaster sunglasses", D21: "tortoiseshell wayfarer sunglasses", D22: "red backpack",
+    D23: "black sling bag crossbody", D24: "wallet and belt gift set men",
+    T01: "colorful wooden building blocks kids", T02: "wooden building set kids", T03: "wooden tumbling tower game",
+    T04: "alphabet letter blocks kids", T05: "colorful building blocks toddlers", T06: "building bricks set kids",
+    T07: "building blocks storage box set", T08: "creative building bricks set", T09: "blue building blocks kids",
+    T10: "educational robot toy kids", T11: "smart robot toy camera kids", T12: "robot toy kids green",
+    T13: "robot toy kids colorful", T14: "robot toy kids blue", T15: "red white robot toy",
+    T16: "toy car colorful kids", T17: "toy race car kids", T18: "plush frog toy",
+    L01: "gift box pink ribbon", L02: "gold silver gift box", L03: "black brown gift box",
+    L04: "gift boxes set", L05: "mint gift box roses", L06: "floral gift boxes set",
+    L07: "white gift boxes red bow", L08: "white gift box red ribbon", L09: "gift wrapped box",
+    L10: "gift boxes set", L11: "white red gift box", L12: "floral gift wrapping paper"
+  };
+  // روابط المورد لمنتج: الرابط الأصلي إن وُجد، وإلا روابط البحث
+  function supplierLinksFor(p){
+    if (p.supplierUrl) return [{ label: "المورد الأصلي", url: p.supplierUrl }];
+    const q = encodeURIComponent(SUPPLIER_QUERY[p.code] || p.name);
+    return SUPPLIER_SEARCH.map(s => ({ label: s.label, url: s.base + q }));
+  }
+
+  /* ===== عناصر الصفحة ===== */
+  const $ = id => document.getElementById(id);
+  const tabsEl = $("tabs"), catalogEl = $("catalog");
+  const orderDialog = $("orderDialog"), orderForm = $("orderForm"), adminDialog = $("adminDialog"), waDialog = $("waDialog");
+  let lastWaText = "";
+  let activeCat = "all";
+  let currentProduct = null;
+
+  /* ===== أدوات مساعدة ===== */
+  function esc(v){
+    return String(v ?? "").replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+  }
+  function money(n){ return Number(n).toLocaleString("en-US") + " " + CURRENCY; }
+  function toast(text){
+    const t = $("toast");
+    t.textContent = text;
+    t.style.display = "block";
+    clearTimeout(toast.timer);
+    toast.timer = setTimeout(() => t.style.display = "none", 5000);
+  }
+  function loadOrders(){
+    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; } catch (e) { return []; }
+  }
+  function saveOrders(list){
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(list)); }
+    catch (e) { toast("تعذّر حفظ الطلب في هذا المتصفح"); }
+  }
+  function validUaePhone(p){
+    return /^(?:\+971|00971|0)?5\d{8}$/.test(p.replace(/[\s-]/g, ""));
+  }
+
+  /* ===== عرض الأقسام والمنتجات ===== */
+  function renderTabs(){
+    const items = [{ id: "all", name: "كل المنتجات" }, ...CATEGORIES];
+    tabsEl.innerHTML = items.map(c =>
+      `<button type="button" class="tab" data-cat="${c.id}" aria-pressed="${c.id === activeCat}">${c.name}</button>`
+    ).join("");
+  }
+
+  function productCard(p){
+    const cat = CATEGORIES.find(c => c.id === p.cat);
+    return `
+      <article class="card" id="product-${p.code}">
+        <div class="thumb" data-icon="${cat.icon}"><img src="${esc(p.image)}" alt="${esc(p.name)}" loading="lazy"></div>
+        <span class="tag">${cat.name} · كود ${p.code}</span>
+        ${p.aud ? `<span class="tag">${p.aud}</span>` : ""}
+        <h4>${p.name}</h4>
+        <p>${p.desc}</p>
+        <div class="price">${money(p.price)}</div>
+        <button type="button" class="btn" data-id="${p.id}">اطلب الآن</button>
+      </article>`;
+  }
+
+  function renderCatalog(){
+    const visible = CATEGORIES.filter(c => activeCat === "all" || c.id === activeCat);
+    catalogEl.innerHTML = visible.map(c => `
+      <div class="cat-block">
+        <h3>${c.icon} ${c.name}</h3>
+        <div class="grid">${PRODUCTS.filter(p => p.cat === c.id).map(productCard).join("")}</div>
+      </div>`).join("");
+  }
+
+  // إذا فشل تحميل صورة، نعرض أيقونة القسم بدلها
+  catalogEl.addEventListener("error", e => {
+    if (e.target.tagName !== "IMG") return;
+    const thumb = e.target.parentElement;
+    thumb.textContent = thumb.dataset.icon;
+  }, true);
+
+  tabsEl.addEventListener("click", e => {
+    const btn = e.target.closest("button[data-cat]");
+    if (!btn) return;
+    activeCat = btn.dataset.cat;
+    renderTabs();
+    renderCatalog();
+  });
+
+  /* ===== نافذة الطلب ===== */
+  function updateTotal(){
+    $("totalPrice").textContent = money(currentProduct.price * Number($("qty").value));
+  }
+
+  catalogEl.addEventListener("click", e => {
+    const btn = e.target.closest("button[data-id]");
+    if (!btn) return;
+    currentProduct = PRODUCTS.find(p => p.id === Number(btn.dataset.id));
+    $("chosen").textContent = currentProduct.name + " (كود " + currentProduct.code + ") — " + money(currentProduct.price);
+    $("formError").textContent = "";
+    $("qty").value = "1";
+    updateTotal();
+    orderDialog.showModal();
+  });
+
+  $("qty").addEventListener("change", updateTotal);
+  $("cancel").addEventListener("click", () => orderDialog.close());
+
+  // رابط المنتج المباشر بصيغة  ...#product-W01  (يعمل عند نشر الموقع على رابط http/https)
+  function productLink(p){
+    let base = SITE_URL.trim();
+    if (!base) {
+      if (!/^https?:$/.test(location.protocol)) return "";
+      base = location.href;
+    }
+    return base.split("#")[0] + "#product-" + p.code;
+  }
+
+  // رسالة واتساب جاهزة ومنسّقة (النجمة * تجعل النص عريضاً في واتساب)
+  function buildWhatsAppText(o){
+    return [
+      "*طلب جديد — " + STORE_NAME + "*",
+      "*رقم الطلب:* " + o.id,
+      "*التاريخ:* " + o.date,
+      "",
+      "*تفاصيل المنتج*",
+      "المنتج: " + o.product,
+      "الكود: " + o.code,
+      "الوصف: " + (o.desc || "—"),
+      "القسم: " + o.category,
+      ...(o.aud ? ["الفئة: " + o.aud] : []),
+      "السعر للقطعة: " + money(o.price),
+      "الكمية: " + o.qty,
+      "الإجمالي: " + money(o.total),
+      "طريقة الدفع: إلكتروني (يُرسل رابط الدفع بعد تأكيد الطلب)",
+      "",
+      "*رابط المنتج في المتجر (اضغط للفتح مباشرة عند المنتج):*",
+      o.link || ("#product-" + o.code),
+      "",
+      "*مصدر المنتج (المورد):*",
+      ...(o.supplierLinks || []).flatMap(l => [l.label + ":", l.url]),
+      "",
+      "*بيانات الزبون*",
+      "الاسم: " + o.name,
+      "الهاتف: " + o.phone,
+      "الإمارة: " + o.emirate,
+      "المنطقة: " + o.area,
+      "العنوان: " + o.address,
+      "ملاحظات: " + (o.message || "—")
+    ].join("\n");
+  }
+
+  // رابط واتساب المباشر على رقم المتجر
+  function buildWhatsAppUrl(o){
+    return "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(buildWhatsAppText(o));
+  }
+
+  orderForm.addEventListener("submit", e => {
+    e.preventDefault();
+    const f = new FormData(orderForm);
+    const name = f.get("name").trim();
+    const phone = f.get("phone").trim();
+    const emirate = f.get("emirate");
+    const area = f.get("area").trim();
+    const address = f.get("address").trim();
+    const err = $("formError");
+
+    if (!name || !area || !address) { err.textContent = "الرجاء تعبئة جميع الحقول المطلوبة."; return; }
+    if (!validUaePhone(phone))      { err.textContent = "أدخل رقم هاتف إماراتي صحيحاً، مثل 0501234567."; return; }
+    if (!EMIRATES.includes(emirate)){ err.textContent = "التوصيل متاح داخل أبوظبي ودبي فقط. اختر إحداهما."; return; }
+    err.textContent = "";
+
+    const qty = Number(f.get("qty"));
+    const cat = CATEGORIES.find(c => c.id === currentProduct.cat);
+    const order = {
+      id: "ORD-" + Date.now().toString(36).toUpperCase(),
+      date: new Date().toLocaleString("ar-AE"),
+      product: currentProduct.name,
+      code: currentProduct.code,
+      aud: currentProduct.aud || "",
+      desc: currentProduct.desc,
+      link: productLink(currentProduct),
+      supplierLinks: supplierLinksFor(currentProduct),
+      category: cat.name,
+      price: currentProduct.price,
+      qty,
+      total: currentProduct.price * qty,
+      name, phone, emirate, area, address,
+      message: f.get("msg").trim(),
+      status: "جديد"
+    };
+
+    // نحفظ الطلب محلياً أولاً حتى لا يضيع
+    const list = loadOrders();
+    list.unshift(order);
+    saveOrders(list);
+
+    // نفتح واتساب برسالة جاهزة (بدون await حتى لا يحجبها المتصفح)
+    const waUrl = buildWhatsAppUrl(order);
+    window.open(waUrl, "_blank");
+
+    // نافذة تأكيد احتياطية: رابط مباشر + نسخ نص الرسالة (إن لم يفتح واتساب تلقائياً)
+    lastWaText = buildWhatsAppText(order);
+    $("waLink").href = waUrl;
+    orderDialog.close();
+    orderForm.reset();
+    waDialog.showModal();
+  });
+
+  /* ===== لوحة الطلبات (مخفية) =====
+     تُفتح بالضغط 5 مرات سريعة على الشعار، أو بإضافة #admin للرابط */
+  const STATUSES = ["جديد", "قيد التجهيز", "قيد التوصيل", "تم التسليم", "ملغي"];
+
+  function renderAdmin(){
+    const list = loadOrders();
+    const sales = list.filter(o => o.status !== "ملغي").reduce((s, o) => s + o.total, 0);
+    $("stats").textContent = "عدد الطلبات: " + list.length + " — إجمالي المبيعات (بدون الملغي): " + money(sales);
+
+    if (!list.length) {
+      $("ordersWrap").innerHTML = '<div class="empty">لا توجد طلبات حتى الآن.</div>';
+      return;
+    }
+    $("ordersWrap").innerHTML = `
+      <table>
+        <thead>
+          <tr><th>الطلب</th><th>المنتج</th><th>الإجمالي</th><th>العميل</th><th>الهاتف</th><th>العنوان</th><th>الحالة</th><th></th></tr>
+        </thead>
+        <tbody>
+          ${list.map(o => `
+            <tr>
+              <td>${esc(o.id)}<br><small>${esc(o.date)}</small></td>
+              <td>${esc(o.product)}<br><small>كود: ${esc(o.code || "—")} — ${esc(o.category)} × ${esc(o.qty)}</small>${/^https?:/.test(o.link || "") ? `<br><small><a href="${esc(o.link)}" target="_blank" rel="noopener">فتح المنتج</a></small>` : ""}${(o.supplierLinks || []).map(l => `<br><small><a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a></small>`).join("")}</td>
+              <td>${esc(money(o.total))}</td>
+              <td>${esc(o.name)}</td>
+              <td dir="ltr">${esc(o.phone)}</td>
+              <td>${esc(o.emirate)} — ${esc(o.area)}<br>${esc(o.address)}${o.message ? "<br><small>" + esc(o.message) + "</small>" : ""}</td>
+              <td>
+                <select data-status="${esc(o.id)}" aria-label="حالة الطلب">
+                  ${STATUSES.map(s => `<option${s === o.status ? " selected" : ""}>${s}</option>`).join("")}
+                </select>
+              </td>
+              <td><button type="button" class="btn small danger" data-del="${esc(o.id)}">حذف</button></td>
+            </tr>`).join("")}
+        </tbody>
+      </table>`;
+  }
+
+  function openAdmin(){
+    if (ADMIN_PASSWORD === "ضع-كلمة-مرور-قوية-هنا" || ADMIN_PASSWORD.length < 8) {
+      toast("لوحة الإدارة غير مفعّلة بعد: اضبط كلمة المرور في الملف أولاً.");
+      return;
+    }
+    const pass = prompt("أدخل كلمة مرور لوحة الطلبات:");
+    if (pass === null) return;
+    if (pass !== ADMIN_PASSWORD) { toast("كلمة المرور غير صحيحة"); return; }
+    renderAdmin();
+    adminDialog.showModal();
+  }
+
+  let logoClicks = 0, logoTimer;
+  $("logo").addEventListener("click", () => {
+    logoClicks++;
+    clearTimeout(logoTimer);
+    logoTimer = setTimeout(() => logoClicks = 0, 3000);
+    if (logoClicks >= 5) { logoClicks = 0; openAdmin(); }
+  });
+  if (location.hash === "#admin") openAdmin();
+
+  $("waClose").addEventListener("click", () => waDialog.close());
+  $("waCopy").addEventListener("click", async () => {
+    try { await navigator.clipboard.writeText(lastWaText); toast("تم نسخ نص الرسالة"); }
+    catch (e) { toast("تعذّر النسخ تلقائياً، استخدم زر فتح واتساب"); }
+  });
+
+  $("adminLink").addEventListener("click", e => { e.preventDefault(); openAdmin(); });
+  $("closeAdmin").addEventListener("click", () => adminDialog.close());
+
+  $("ordersWrap").addEventListener("change", e => {
+    const sel = e.target.closest("select[data-status]");
+    if (!sel) return;
+    const list = loadOrders();
+    const order = list.find(o => o.id === sel.dataset.status);
+    if (order) { order.status = sel.value; saveOrders(list); renderAdmin(); }
+  });
+
+  $("ordersWrap").addEventListener("click", e => {
+    const btn = e.target.closest("button[data-del]");
+    if (!btn || !confirm("حذف هذا الطلب؟")) return;
+    saveOrders(loadOrders().filter(o => o.id !== btn.dataset.del));
+    renderAdmin();
+  });
+
+  $("clearAll").addEventListener("click", () => {
+    if (!confirm("حذف كل الطلبات نهائياً؟")) return;
+    saveOrders([]);
+    renderAdmin();
+  });
+
+  /* ===== تشغيل ===== */
+  // فتح المنتج مباشرة من الرابط  #product-W01  (يعرض كل الأقسام ثم ينتقل للبطاقة ويبرزها)
+  function focusFromHash(){
+    const m = location.hash.match(/^#product-([A-Za-z]\d{2})$/);
+    if (!m) return;
+    const code = m[1].toUpperCase();
+    if (!PRODUCTS.some(p => p.code === code)) return;
+    if (activeCat !== "all") { activeCat = "all"; renderTabs(); renderCatalog(); }
+    const card = $("product-" + code);
+    if (!card) return;
+    card.scrollIntoView({ behavior: "smooth", block: "center" });
+    card.classList.add("highlight");
+    setTimeout(() => card.classList.remove("highlight"), 4000);
+  }
+
+  $("year").textContent = new Date().getFullYear();
+  renderTabs();
+  renderCatalog();
+  window.addEventListener("hashchange", focusFromHash);
+  window.addEventListener("load", () => {
+    setTimeout(focusFromHash, 300);
+    setTimeout(focusFromHash, 1500);   // مرة ثانية بعد استقرار تحميل الصور
+  });
+</script>
+</body>
+</html>
